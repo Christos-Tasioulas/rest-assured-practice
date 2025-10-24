@@ -34,7 +34,7 @@ public class CustomerController {
     }
 
     @GetMapping("/byLastName/{lastname}")
-    public List<CustomerResponse> getCustomersByLastName(@PathVariable String lastName) {
-        return customerService.getCustomerByLastname(lastName);
+    public List<CustomerResponse> getCustomersByLastName(@PathVariable String lastname) {
+        return customerService.getCustomerByLastname(lastname);
     }
 }
