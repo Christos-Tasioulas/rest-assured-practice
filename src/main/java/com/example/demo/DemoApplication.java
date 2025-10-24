@@ -11,6 +11,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 import java.util.Arrays;
+import java.util.Optional;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -32,25 +33,25 @@ public class DemoApplication {
             repository.save(new Customer("Michelle", "Dessler"));
 
             // fetch all customers
-            log.info("Customers found with findAll():");
-            log.info("-------------------------------");
-            repository.findAll().forEach(customer -> {
-                log.info(customer.toString());
-            });
-            log.info("");
+//            log.info("Customers found with findAll():");
+//            log.info("-------------------------------");
+//            repository.findAll().forEach(customer -> {
+//                log.info(customer.toString());
+//            });
+//            log.info("");
 
             // fetch an individual customer by ID
-            Customer customer = repository.findById(1L);
-            log.info("Customer found with findById(1L):");
-            log.info("--------------------------------");
-            log.info(customer.toString());
-            log.info("");
+//            Optional<Customer> customer = repository.findById(1L);
+//            log.info("Customer found with findById(1L):");
+//            log.info("--------------------------------");
+//            log.info(customer.toString());
+//            log.info("");
 
             // fetch customers by last name
-            log.info("Customer found with findByLastName('Bauer'):");
-            log.info("--------------------------------------------");
-            repository.findByLastName("Bauer").forEach(bauer -> log.info(bauer.toString()));
-            log.info("");
+//            log.info("Customer found with findByLastName('Bauer'):");
+//            log.info("--------------------------------------------");
+//            repository.findByLastName("Bauer").forEach(bauer -> log.info(bauer.toString()));
+//            log.info("");
         };
     }
 
