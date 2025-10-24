@@ -13,7 +13,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class CustomerControllerTest {
+public class CustomerControllerTest {
 
     @Autowired
     private MockMvc mvc;
