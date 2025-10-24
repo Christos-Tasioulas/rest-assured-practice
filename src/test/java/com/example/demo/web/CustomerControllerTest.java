@@ -30,7 +30,8 @@ class CustomerControllerTest {
                 .get("/api/customers")
                 .then()
                 .statusCode(200)
-                .body("size()", equalTo(5));
+                .body("size()", equalTo(5))
+                .log().all();
     }
 
     @Test
@@ -41,7 +42,8 @@ class CustomerControllerTest {
                 .then()
                 .statusCode(200)
                 .body("firstName", equalTo("Jack"))
-                .body("lastName", equalTo("Bauer"));
+                .body("lastName", equalTo("Bauer"))
+                .log().all();
     }
 
     @Test
@@ -53,7 +55,8 @@ class CustomerControllerTest {
                 .statusCode(200)
                 .body("size()", equalTo(2))
                 .body("[0].firstName", equalTo("Jack"))
-                .body("[1].firstName", equalTo("Kim"));
+                .body("[1].firstName", equalTo("Kim"))
+                .log().all();
     }
 }
 
